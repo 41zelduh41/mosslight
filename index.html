@@ -10,17 +10,8 @@
             background: #111;
             color: #eee;
             font-family: monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        main {
             text-align: center;
-            max-width: 700px;
-            padding: 30px;
+            padding: 20vh 20px;
         }
 
         h1 {
@@ -28,27 +19,78 @@
             letter-spacing: 8px;
         }
 
-        p {
+        button {
+            background: none;
+            color: #eee;
+            border: 1px solid #eee;
+            padding: 12px 24px;
+            font-family: monospace;
             font-size: 1rem;
-            line-height: 1.6;
+            cursor: pointer;
         }
 
-        .hidden {
+        button:hover {
+            background: #eee;
             color: #111;
-            user-select: text;
+        }
+
+        #story {
+            display: none;
+            max-width: 700px;
+            margin: 60px auto;
+            text-align: left;
+            line-height: 1.8;
         }
     </style>
 </head>
 
 <body>
-    <main>
-        <h1>MOSSLIGHT</h1>
 
-        <p>Something is waiting.</p>
+    <h1>MOSSLIGHT</h1>
 
-        <p class="hidden">
-            <!-- Your next clue can go here -->
+    <p>There is more here than you can see.</p>
+
+    <button onclick="showStory()">Continue</button>
+
+    <div id="story">
+        <h2>The Girl Who Stayed</h2>
+
+        <p>
+            Mira had never understood why the streetlights turned on
+            before sunset.
         </p>
-    </main>
+
+        <p>
+            Every evening, she walked the same road home.
+            Every evening, another girl sat beneath the old oak tree.
+        </p>
+
+        <p>
+            She never spoke.
+        </p>
+
+        <p>
+            One evening, Mira finally sat beside her.
+        </p>
+
+        <p>
+            "You come here every day?"
+        </p>
+
+        <p>
+            The girl smiled.
+            "Only when I'm waiting."
+        </p>
+
+        <!-- PUT YOUR HIDDEN PUZZLE CLUES HERE -->
+
+    </div>
+
+    <script>
+        function showStory() {
+            document.getElementById("story").style.display = "block";
+        }
+    </script>
+
 </body>
 </html>
