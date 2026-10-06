@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +42,14 @@
             text-align: left;
             line-height: 1.8;
         }
+
+        #secret {
+            display: none;
+            margin-top: 50px;
+            padding: 20px;
+            border: 1px solid #eee;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -56,7 +65,7 @@
         <h2>The Girl Who Stayed</h2>
 
         <p>
-            Mira had never understood why the streetlights turned on
+            She had never understood why the streetlights turned on
             before sunset.
         </p>
 
@@ -82,15 +91,50 @@
             "Only when I'm waiting."
         </p>
 
-        <!-- PUT YOUR HIDDEN PUZZLE CLUES HERE -->
+        <p>
+            Mira glanced at the clock.
+            <br>
+            "It's 7:43 PM."
+        </p>
 
+        <p>
+            The girl looked toward the trees.
+            "Then you should probably go."
+        </p>
+
+        <div id="secret">
+            <p>You came at the right time.</p>
+
+            <p>
+                https://brxwx.be/YX_BR704xKn
+            </p>
+        </div>
     </div>
 
     <script>
         function showStory() {
             document.getElementById("story").style.display = "block";
         }
+
+        function checkTime() {
+            const now = new Date();
+
+            const hour = now.getHours();
+            const minute = now.getMinutes();
+
+            // 7:43 PM
+            if (hour === 19 && minute === 43) {
+                document.getElementById("secret").style.display = "block";
+            }
+        }
+
+        // Check immediately when the page loads
+        checkTime();
+
+        // Keep checking the clock every second
+        setInterval(checkTime, 1000);
     </script>
 
 </body>
 </html>
+```
